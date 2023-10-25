@@ -50,7 +50,7 @@ function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'I’m Spencer Sharp. I live in New York City, where I design the future.',
+    'I’m Seun, I live in Texas where I develop responsive web applications, that impacts the future.',
 }
 
 export default function About() {
@@ -73,13 +73,13 @@ export default function About() {
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-            I'm Seun Osho. I live in Texas, where I develop progressive web applications that shapes the future of healthcare. With over 5 years of experience in web development, I have honed my skills in React, Tailwind, and TypeScript to build smooth, responsive interfaces optimized for modern platforms.
+            I develop progressive web applications that shapes the future of healthcare. With several years of experience in web development, I have honed my skills in React, Tailwind, and TypeScript to build smooth, responsive interfaces optimized for modern platforms.
             </p>
             <p>
             In my spare time, I enjoy cooking and experimenting with new recipes. There's something satisfying about combining fresh ingredients to create a delicious meal. I also love settling in to watch a good sci-fi or action movie. Getting immersed in an imaginative world of the future is a great way to relax. Whenever I can, I like to read futuristic and visionary fiction books. It's fascinating to think about how today's visionary ideas could become tomorrow's reality.
             </p>
             <p>
-            I thrive on staying ahead of the latest web development trends and techniques. I'm constantly learning, reading programming books and blogs, and experimenting with new frameworks and libraries. I believe this curiosity and drive to expand my knowledge is what makes me skilled at creating progressive web apps that shape the healthcare industry's future. The projects I work on aim to directly help doctors, patients, and medical professionals through intuitive design, seamless functionality, and innovative features.
+            I thrive on staying ahead of the latest web development trends and techniques. I'm constantly learning, reading programming books and blogs, and experimenting with new frameworks and libraries. I believe this curiosity and drive to expand my knowledge is what makes me skilled at creating progressive web apps that shape the healthcare industry's future.
             </p>
             <p>
             Overall, web development gives me an outlet to take my creativity and problem-solving skills and build something meaningful. I find it extremely rewarding to see my code come to life in practical applications that have a positive impact. I'm excited to continue growing as a developer and creating progressive healthcare solutions that drive the industry forward.
@@ -88,12 +88,6 @@ export default function About() {
         </div>
         <div className="lg:pl-20">
           <ul role="list">
-            <SocialLink href="#" icon={TwitterIcon}>
-              Follow on Twitter
-            </SocialLink>
-            <SocialLink href="#" icon={InstagramIcon} className="mt-4">
-              Follow on Instagram
-            </SocialLink>
             <SocialLink href="#" icon={GitHubIcon} className="mt-4">
               Follow on GitHub
             </SocialLink>
@@ -105,7 +99,7 @@ export default function About() {
               icon={MailIcon}
               className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
             >
-              spencer@planetaria.tech
+              oshodorcas@yahoo.com
             </SocialLink>
           </ul>
         </div>
