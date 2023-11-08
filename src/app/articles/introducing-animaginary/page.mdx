@@ -2,10 +2,10 @@ import { ArticleLayout } from '@/components/ArticleLayout'
 
 export const article = {
   author: 'Adam Wathan',
-  date: '2022-09-02',
-  title: 'Introducing Animaginary: High performance web animations',
+  date: '2022-05-09',
+  title: 'Typescript with React',
   description:
-    'When you’re building a website for a company as ambitious as Planetaria, you need to make an impression. I wanted people to visit our website and see animations that looked more realistic than reality itself.',
+    'TypeScript support in React helps make apps more robust, maintainable and enjoyable to write. Static types are great for documenting and validating complex components, state and data structures. Adopting TypeScript may involve some initial cost, but pays off in the long run for most React codebases.',
 }
 
 export const metadata = {
@@ -15,92 +15,94 @@ export const metadata = {
 
 export default (props) => <ArticleLayout article={article} {...props} />
 
-When you’re building a website for a company as ambitious as Planetaria, you need to make an impression. I wanted people to visit our website and see animations that looked more realistic than reality itself.
+TypeScript support in React helps make apps more robust, maintainable and enjoyable to write. Static types are great for documenting and validating complex components, state and data structures. Adopting TypeScript may involve some initial cost, but pays off in the long run for most React codebases.
 
-To make this possible, we needed to squeeze every drop of performance out of the browser possible. And so Animaginary was born.
+<b>Typing Props</b>
 
-```js
-import { animate } from '@planetaria/animaginary'
+We can add TypeScript types for component props to validate the data passed in. For example:
 
-export function MyComponent({ open, children }) {
+```c
+interface User {
+  name: string;
+  id: number;
+}
+
+function Profile(props: User) {
+  // ..
+};
+```
+Props are validated against the User interface. Destructuring also works:
+
+```c
+function Profile({ name, id }: User) {
+  // ...
+};
+```
+<b>Typing State</b>
+
+We can also type the state of a component:
+
+```c
+interface UserState {
+  user: User | null;
+}
+
+class Profile extends React.Component<{}, UserState> {
+  state: UserState = {
+    user: null
+  }
+};
+```
+
+<b>Typing Event Handlers</b>
+
+We can add types for event handlers such as:
+
+```c
+interface AppProps {
+  message: string;
+}
+
+function App({ message }: AppProps) {
+
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+    setMessage(e.target.value)
+  }
+
   return (
-    <animate.div
-      in={open}
-      animateFrom="opacity-0 scale-95"
-      animateTo="opacity-100 scale-100"
-      duration={350}
-    >
-      {children}
-    </animate.div>
+    <input 
+      value={message}
+      onChange={handleChange} 
+    />
   )
-}
+};
 ```
+Typing the event provides autocomplete and validation.
 
-Animaginary is our new web animation library that redefines what you thought was possible on the web. Hand-written in optimized WASM, Animaginary can even animate the `height` property of an element at 60fps.
+<b>Interface or Type?</b>
 
-## Sermone fata
+interface and type aliases can both be used for type definitions in TypeScript. Here are the key differences:
 
-Lorem markdownum, bracchia in redibam! Terque unda puppi nec, linguae posterior
-in utraque respicere candidus Mimasque formae; quae conantem cervice. Parcite
-variatus, redolentia adeunt. Tyrioque dies, naufraga sua adit partibus celanda
-torquere temptata, erit maneat et ramos, [iam](#) ait dominari
-potitus! Tibi litora matremque fumantia condi radicibus opusque.
+Interfaces can be extended, types cannot.
 
-Deus feram verumque, fecit, ira tamen, terras per alienae victum. Mutantur
-levitate quas ubi arcum ripas oculos abest. Adest [commissaque
-victae](#) in gemitus nectareis ire diva
-dotibus ora, et findi huic invenit; fatis? Fractaque dare superinposita
-nimiumque simulatoremque sanguine, at voce aestibus diu! Quid veterum hausit tu
-nil utinam paternos ima, commentaque.
+Types can do more advanced types like union types.
+
+Use interfaces for dictating structure, types for composable building blocks.
+
+
+<b>Generics</b>
+
+
+Types like interfaces can be made generic and reusable:
 
 ```c
-exbibyte_wins = gigahertz(3);
-grayscaleUtilityClient = control_uat;
-pcmciaHibernate = oop_virus_console(text_mountain);
-if (stateWaisFirewire >= -2) {
-    jfs = 647065 / ldapVrml(tutorialRestore, 85);
-    metal_runtime_parse = roomComputingResolution - toolbarUpload +
-            ipx_nvram_open;
-} else {
-    maximizeSidebar *= suffix_url(flatbed + 2, requirements_encoding_node +
-            only_qbe_media, minicomputer);
+interface List<T> {
+  items: T[];
 }
+
+const nums: List<number> = {
+  items: [1, 2, 3]
+};
 ```
 
-Aere repetiti cognataque natus. Habebat vela solutis saepe munus nondum adhuc
-oscula nomina pignora corpus deserat.
 
-## Lethaei Pindumve me quae dinumerat Pavor
-
-Idem se saxa fata pollentibus geminos; quos pedibus. Est urnis Herses omnes nec
-divite: et ille illa furit sim verbis Cyllenius.
-
-1. Captus inpleverunt collo
-2. Nec nam placebant
-3. Siquos vulgus
-4. Dictis carissime fugae
-5. A tacitos nulla viginti
-
-Ungues fistula annoso, ille addit linoque motatque uberior verso
-[rubuerunt](#) confine desuetaque. _Sanguine_ anteit
-emerguntque expugnacior est pennas iniqui ecce **haeret** genus: peiora imagine
-fossas Cephisos formosa! Refugitque amata [refelli](#)
-supplex. Summa brevis vetuere tenebas, hostes vetantis, suppressit, arreptum
-regna. Postquam conpescit iuvenis habet corpus, et erratica, perdere, tot mota
-ars talis.
-
-```c
-digital.webcam_dual_frequency = webmasterMms;
-if (5 + language_standalone_google) {
-    cc_inbox_layout *= file_character;
-    task += p;
-    lockUnicode += enterprise_monochrome(tokenFunctionPersonal, keyVirtual,
-            adf);
-}
-windows_binary_esports(87734, array(restoreRomTopology, adRaw(407314),
-        dongleBashThumbnail), interpreter);
-```
-
-Sit volat naturam; motu Cancri. Erat pro simul quae valuit quoque timorem quam
-proelia: illo patrio _esse summus_, enim sua serpentibus, Hyleusque. Est coniuge
-recuso; refert Coroniden ignotos manat, adfectu.

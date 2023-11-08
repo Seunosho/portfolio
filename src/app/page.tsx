@@ -7,16 +7,14 @@ import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import {
   GitHubIcon,
-  InstagramIcon,
   LinkedInIcon,
-  TwitterIcon,
 } from '@/components/SocialIcons'
-import logoAirbnb from '@/images/logos/airbnb.svg'
+import logoHealthcare from '@/images/logos/healthcare.svg'
 import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
+import logoAnimaginary from '@/images/logos/animaginary.svg'
+import logoKare from '@/images/logos/kare.svg'
 import health from '@/images/photos/health.jpg'
-import image2 from '@/images/photos/image-2.jpg'
+import books from '@/images/photos/books.jpg'
 import flower from '@/images/photos/flower.jpg'
 import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
@@ -102,7 +100,7 @@ function SocialLink({
   icon: React.ComponentType<{ className?: string }>
 }) {
   return (
-    <Link className="group -m-1 p-1" {...props}>
+    <Link className="group -m-1 p-1" target='_blank' {...props}>
       <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
     </Link>
   )
@@ -187,20 +185,29 @@ function Resume() {
     {
       company: 'Kare',
       title: 'Frontend Developer',
-      logo: logoPlanetaria,
+      logo: logoKare,
       start: '2022',
       end: {
         label: 'Present',
         dateTime: new Date().getFullYear().toString(),
       },
     },
+
+    {
+      company: 'Excellent Network',
+      title: 'Frontend Developer Intern',
+      logo: logoAnimaginary,
+      start: '2021',
+      end: '2022',
+
+    },
    
     {
-      company: 'Christain Care Communities',
+      company: 'Midwestern Healthcare Center',
       title: 'Health and Wellness coordinator',
-      logo: logoStarbucks,
+      logo: logoHealthcare,
       start: '2020',
-      end: '2022',
+      end: '2021',
     },
   ]
 
@@ -229,7 +236,7 @@ function Photos() {
   return (
     <div className="mt-16 sm:mt-20">
       <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-        {[ flower, health ].map((image, imageIndex) => (
+        {[ flower, health, books ].map((image, imageIndex) => (
           <div
             key={image.src}
             className={clsx(
@@ -261,12 +268,12 @@ export default async function Home() {
             Frontend Developer.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-          Hi, I'm Oluwaseun Osho, a frontend developer based in Texas, United States. I have a passion for building responsive and intuitive user interfaces using React and Tailwind CSS.
+          Hi, I'm Seun Osho, a frontend developer based in Texas, United States. I have a passion for building responsive and intuitive user interfaces using React and Tailwind CSS.
           </p>
           <div className="mt-6 flex gap-6">
             
             <SocialLink
-              href="https://github.com"
+              href="https://github.com/SeunOsho"
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
             />

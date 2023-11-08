@@ -4,13 +4,8 @@ import Link from 'next/link'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import {
-  GitHubIcon,
-  InstagramIcon,
-  LinkedInIcon,
-  TwitterIcon,
-} from '@/components/SocialIcons'
-import portraitImage from '@/images/portrait.jpg'
+import { GitHubIcon, LinkedInIcon} from '@/components/SocialIcons'
+import developerimages  from '@/images/photos/developer.jpg'
 
 function SocialLink({
   className,
@@ -60,7 +55,7 @@ export default function About() {
         <div className="lg:pl-20">
           <div className="max-w-xs px-2.5 lg:max-w-none">
             <Image
-              src={portraitImage}
+              src={developerimages}
               alt=""
               sizes="(min-width: 1024px) 32rem, 20rem"
               className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
@@ -95,11 +90,10 @@ export default function About() {
               Follow on LinkedIn
             </SocialLink>
             <SocialLink
-              href="mailto:spencer@planetaria.tech"
+              href="oshodorcas@yahoo.com"
               icon={MailIcon}
               className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
             >
-              oshodorcas@yahoo.com
             </SocialLink>
           </ul>
         </div>

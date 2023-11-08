@@ -1,0 +1,97 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/image'
+
+
+export const article = {
+  author: 'Seun Osho',
+  date: '2022-09-05',
+  title: 'React Context API',
+  description:
+    'React Context API is a powerful tool for sharing data globally across component trees without passing props down manually at every level. In this article, we will cover the fundamentals of React context and when its most useful.',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+The React Context API provides a way to effectively produce global variables that can be passed around without having to manually thread props. It essentially creates a global store that can be accessed by components at different levels.
+Context is designed to share data that is considered "global" for a component subtree, like current user, theme, or preferred language. 
+
+Prior to context, data was passed top-down through the tree using props. This can make certain components bloated with props they don't need just to reach children many levels down.
+With context, you can directly access and consume data in any nested component by creating a context provider higher up in the tree.
+
+Why Use Context?
+Prop drilling can make passing data tedious as your app grows. Context provides a way to share data like theme, language, user details etc across components more easily.
+
+Some good use cases for using React Context:
+
+Managing current authenticated user state
+Theme data like dark mode
+Localization - languages, messages
+Global settings like app title, description etc
+
+```c
+// Create Context 
+const ThemeContext = React.createContext()
+
+// Provider Component
+function App() {
+
+  const [theme, setTheme] = useState('light')
+
+  const toggleTheme = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light')
+  }
+
+  return (
+    <ThemeContext.Provider value={{theme, toggleTheme}}>
+      {/* Child components */}
+    </ThemeContext.Provider>
+  )
+}
+
+// Consumer Component
+function Header() {
+  return (
+    <ThemeContext.Consumer>
+      {({theme, toggleTheme}) => (
+        <header className={theme}>
+           {/* Display theme  */}
+           <button onClick={toggleTheme}>Toggle Theme</button>
+        </header>
+      )}
+    </ThemeContext.Consumer>
+  );
+}
+```
+useContext Hook
+Function components can consume context with the useContext hook:
+
+```c
+const {theme, toggleTheme} = useContext(ThemeContext);
+```
+
+When Not to Use Context
+
+Context is handy for global data, but should not be overused. Stick to props for passing data to immediate children:
+
+✅ Use Context:
+
+-User authentication state
+
+-UI theme
+
+-Language
+
+❌ Avoid Context:
+
+-Passing props to a child component
+
+-Managing state that changes frequently
+
+-Complex objects that only need to be shared between siblings
+
+
