@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'Seun Osho is a frontend developer with experience building web applications using React, TypeScript, and other modern web technologies. He is skilled at creating intuitive user interfaces and complex frontend architectures.',
   alternates: {
     types: {
-      'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
+      // 'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
     },
   },
 }

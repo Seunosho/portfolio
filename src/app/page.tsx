@@ -268,7 +268,7 @@ export default async function Home() {
             Frontend Developer.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-          Hi, I'm Seun Osho, a frontend developer based in Texas, United States. I have a passion for building responsive and intuitive user interfaces using React and Tailwind CSS.
+          Hi, I&apos;m Seun Osho, a frontend developer based in Texas, United States. I have a passion for building responsive and intuitive user interfaces using React and Tailwind CSS.
           </p>
           <div className="mt-6 flex gap-6">
             

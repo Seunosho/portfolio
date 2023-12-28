@@ -53,7 +53,7 @@ export default function Uses() {
             I recently added TypeScript to a React project to add types to props, state, and API responses.
           </Tool>
           <Tool title="React">
-          I leverage React's composable components, hooks, and context API to build reusable UI code, manage state, and create features like patient portals, secure messaging, and displaying dynamic health records for modern healthcare web apps at startups.
+          I leverage React&apos;s composable components, hooks, and context API to build reusable UI code, manage state, and create features like patient portals, secure messaging, and displaying dynamic health records for modern healthcare web apps at startups.
           </Tool>
           <Tool title="Storybook">
             I utilize Storybook to build an isolated component library for each project.
@@ -63,7 +63,7 @@ export default function Uses() {
           <Tool title="CSS and Styling">
           Tailwind has been a gamechanger for me to style responsive layouts efficiently.
           I customize Tailwind configurations for each project including color palettes, type scales, and component variants.
-          For a recent project, I created a Tailwind theme matching the client's brand guidelines.
+          For a recent project, I created a Tailwind theme matching the client&apos;s brand guidelines.
           </Tool>
           <Tool title="MongoDB">
           I prefer MongoDB for its flexibility, scalability, and JSON-like documents.
