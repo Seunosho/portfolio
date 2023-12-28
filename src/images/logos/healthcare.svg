@@ -1,0 +1,7 @@
+<svg width="400" height="150" viewBox="0 0 400 150" xmlns="http://www.w3.org/2000/svg"> <rect width="400" height="150" fill="#41B883" /> <g fill="white">
+<path d="M50,75 L100,40 L100,110 Z"/>
+<circle cx="150" cy="75" r="30"/>
+<path d="M250,50 L300,75 L250,100 Z"/>
+</g>
+<text x="200" y="115" text-anchor="middle" font-size="30">Healthcare</text>
+</svg>

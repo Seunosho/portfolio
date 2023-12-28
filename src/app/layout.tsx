@@ -7,15 +7,15 @@ import '@/styles/tailwind.css'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - Spencer Sharp',
+    template: '%s - Seun Osho',
     default:
-      'Spencer Sharp - Software designer, founder, and amateur astronaut',
+      'Seun Osho - Frontend developer.',
   },
   description:
-    'I’m Spencer, a software designer and entrepreneur based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms.',
+    'Seun Osho is a frontend developer with experience building web applications using React, TypeScript, and other modern web technologies. He is skilled at creating intuitive user interfaces and complex frontend architectures.',
   alternates: {
     types: {
-      'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
+      // 'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
     },
   },
 }

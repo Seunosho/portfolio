@@ -10,8 +10,8 @@ export async function GET(req: Request) {
   }
 
   let author = {
-    name: 'Spencer Sharp',
-    email: 'spencer@planetaria.tech',
+    name: 'Seun Osho',
+    email: 'oshodorcas@yahoo.com',
   }
 
   let feed = new Feed({
@@ -23,9 +23,9 @@ export async function GET(req: Request) {
     image: `${siteUrl}/favicon.ico`,
     favicon: `${siteUrl}/favicon.ico`,
     copyright: `All rights reserved ${new Date().getFullYear()}`,
-    feedLinks: {
-      rss2: `${siteUrl}/feed.xml`,
-    },
+    // feedLinks: {
+    //   rss2: `${siteUrl}/feed.xml`,
+    // },
   })
 
   let articleIds = require
